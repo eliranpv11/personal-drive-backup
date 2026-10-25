@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Personal Drive Backup is a private, single-user backup tool using Restic and rclone with Google Drive.">
+  <meta name="referrer" content="no-referrer">
+  <title>Personal Drive Backup</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header"><a class="brand" href="./">Personal Drive Backup</a><nav aria-label="Main navigation"><a href="privacy.html">Privacy policy</a></nav></header>
+  <main id="main">
+    <p class="eyebrow">Personal use · Application information</p>
+    <h1>A private backup tool for personal files.</h1>
+    <p class="intro">Personal Drive Backup is operated by <a href="https://github.com/eliranpv11">eliranpv11</a> for the owner's own Google account. It uses Restic and rclone to create encrypted backups and store them in a designated Google Drive backup folder.</p>
+    <section aria-labelledby="purpose"><h2 id="purpose">What the application does</h2>
+      <p>The application runs on the owner's computer. It reads selected local files, encrypts them with Restic, and uploads backup data to the owner's Google Drive. It can read that data to check backup integrity and restore files. A separate local backup is created directly from the original files.</p>
+    </section>
+    <section aria-labelledby="access"><h2 id="access">Why Google Drive access is requested</h2>
+      <p>Google OAuth authorizes rclone to use the Drive API for backup storage and recovery. The configured authorization requests the full Drive scope, which permits viewing and managing Drive files. The backup automation is configured to operate on its designated backup repository; this scope itself is not limited to that folder.</p>
+      <p>The website does not sign you in to Google, receive authorization tokens, or store backup files. Authorization happens through Google's own consent screen and the locally running tool.</p>
+    </section>
+    <section aria-labelledby="personal"><h2 id="personal">For the owner's personal use</h2>
+      <p>This is not a public backup service. There are no customer accounts, subscriptions, or public sign-ups. This site provides application information for the Google OAuth configuration.</p>
+      <p>Read the <a href="privacy.html">privacy policy</a> for details about data access, storage, retention, and revoking access.</p>
+    </section>
+    <section aria-labelledby="contact"><h2 id="contact">Contact</h2><p>Contact the maintainer through the <a href="https://github.com/eliranpv11/personal-drive-backup/issues">documentation repository</a>. Do not post backup contents, passwords, authorization codes, or tokens in public issues.</p></section>
+  </main>
+  <footer>Personal Drive Backup · <a href="privacy.html">Privacy policy</a> · Updated 25 October 2026</footer>
+</body>
+</html>

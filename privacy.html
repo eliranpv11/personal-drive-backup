@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Privacy policy for Personal Drive Backup, a single-user Restic and rclone backup tool.">
+  <meta name="referrer" content="no-referrer">
+  <title>Privacy policy — Personal Drive Backup</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header"><a class="brand" href="./">Personal Drive Backup</a><nav aria-label="Main navigation"><a href="./">Application information</a></nav></header>
+  <main id="main">
+    <p class="eyebrow">Effective 25 October 2026</p>
+    <h1>Privacy policy</h1>
+    <p class="intro">Personal Drive Backup is a personal backup automation operated by <a href="https://github.com/eliranpv11">eliranpv11</a> for the owner's own files and Google account. It is not offered as a service to other users.</p>
+    <section aria-labelledby="data"><h2 id="data">1. Data accessed and used</h2>
+      <p>The local tool reads files selected for backup, including their contents, names, paths, sizes, and modification times. Restic encrypts file contents and backup metadata before storing them in a backup repository.</p>
+      <p>Through rclone, the tool uses Google Drive file contents and metadata needed to create, list, read, verify, and restore its backup repository. It may obtain storage quota information when checking the destination. Its full Drive OAuth scope technically permits access to other Drive files, although the backup automation is configured to target its designated repository.</p>
+      <p>Google OAuth access and refresh tokens allow the tool to access Drive without a new sign-in for every scheduled backup. The tool does not collect the Google account password.</p>
+    </section>
+    <section aria-labelledby="storage"><h2 id="storage">2. Where data is stored</h2>
+      <p>Encrypted backups are stored on the owner's local storage and in the owner's Google Drive. Google receives the encrypted repository data and the Drive requests required to store and retrieve it. Local diagnostic logs can include file paths, error messages, backup identifiers, and run statistics.</p>
+      <p>OAuth credentials and tokens are stored locally in the rclone configuration, protected by operating-system file permissions. The Restic password is stored locally using Windows protection tied to the owner's user account and is made available to the running backup process. These secrets are not published on this website.</p>
+    </section>
+    <section aria-labelledby="sharing"><h2 id="sharing">3. Sharing and purpose limits</h2>
+      <p>The tool uses Google user data only for the owner's backup, verification, and recovery operations. The operator does not sell that data, use it for advertising, or use it to train AI models. Backup contents and credentials are not uploaded to this public documentation repository.</p>
+      <p>Google processes Drive storage and API activity under its own applicable terms and <a href="https://policies.google.com/privacy">privacy policy</a>. The application has no separate hosted backend that receives the owner's backup data.</p>
+    </section>
+    <section aria-labelledby="retention"><h2 id="retention">4. Retention and deletion</h2>
+      <p>Backups remain until the owner deliberately removes snapshots or repositories. During the current migration setup, automatic backup retention deletion is disabled. Deleting an original file does not automatically remove copies from existing backup snapshots.</p>
+      <p>The owner controls deletion of local backup data, local logs, and cloud repositories. Google Drive trash and retention behavior may affect when a deleted cloud file is permanently removed.</p>
+    </section>
+    <section aria-labelledby="control"><h2 id="control">5. Revoking access</h2>
+      <p>The owner can revoke the application's authorization in <a href="https://myaccount.google.com/connections">Google Account connections</a> and disable the local scheduled task. Revocation prevents future authorized Drive operations; it does not delete existing local or cloud backups. The owner may separately remove local OAuth credentials after disabling the tool.</p>
+    </section>
+    <section aria-labelledby="website"><h2 id="website">6. This website</h2>
+      <p>These static pages contain no analytics scripts, advertising, forms, or application cookies. They do not collect Google tokens or backup files. GitHub Pages hosts the site and may process technical request information, such as IP addresses, under the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub privacy statement</a>. Following an external link is subject to that site's policies.</p>
+    </section>
+    <section aria-labelledby="changes"><h2 id="changes">7. Changes and contact</h2>
+      <p>This page will be updated if the documented data practices change. Questions can be sent to the maintainer through the <a href="https://github.com/eliranpv11/personal-drive-backup/issues">documentation repository</a>. Public issues must not contain private files, passwords, authorization codes, or tokens.</p>
+    </section>
+  </main>
+  <footer><a href="./">Personal Drive Backup</a> · Privacy policy · Updated 25 October 2026</footer>
+</body>
+</html>
